@@ -1,12 +1,12 @@
-import { Href, Link } from "expo-router";
-import {Image, Text, TouchableOpacity, View} from "react-native";
+import { images } from "@/constants/images";
 import MaskedView from "@react-native-masked-view/masked-view";
-import {images} from "@/constants/images";
+import { Href, Link } from "expo-router";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 const MovieCard = ({ movie: {movie_id, poster_url, title}, index }: TrendingCardProps ) => {
 
     return (
-        <Link href={`/movie/${movie_id}` as Href} asChild>
+        <Link href={`/movies/${movie_id}` as Href} asChild>
             <TouchableOpacity className="w-32 relative pl-5">
                 <Image
                     source={{
